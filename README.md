@@ -3,12 +3,11 @@
 ## Launch Linux EC2 instance in AWS
 ### Create and attach IAM role to EC2 Instance.
 	Kops need permissions to access
-		S3
-		EC2
-		VPC
-		Route53
-		Autoscaling
-		etc..
+		AmazonEC2FullAccess
+		AmazonRoute53FullAccess
+		AmazonS3FullAccess
+		IAMFullAccess
+		AmazonVPCFullAccess
 
 ## Install kops CLI ##
 
