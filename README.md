@@ -32,6 +32,12 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 ## Create S3 bucket for KOps ##
 ```aws s3 mb s3://kops.cerebrone.com --region us-east-1```
 
+## Create private hosted zone in AWS Route53
+ 1. Head over to aws Route53 and create hostedzone
+ 2. Choose name for example (xyz.in)
+ 3. Choose type as privated hosted zone for VPC
+ 4. Select default vpc in the region you are setting up your cluster
+ 5. Hit create
 
 ## Adding ENV variables to Bashrc ##
 ```vi ~/.bashrc```
