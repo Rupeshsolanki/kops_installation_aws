@@ -1,6 +1,7 @@
 # kops_installation_aws
 
 ## Install kops CLI ##
+
 ```curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64```
 
 ```chmod +x kops-linux-amd64```
@@ -27,7 +28,10 @@
 ```source ~/.bashrc```
 
 ## Creating Cluster using KOps ##
-```kops create cluster --state=${KOPS_STATE_STORE} --node-count=2 --master-size=t2.medium --node-size=t2.medium --zones=us-east-1a --name=${KOPS_CLUSTER_NAME} --dns private --master-count 1 --networking flannel --image=ami-042e8287309f5df03```
+```kops create cluster --state=${KOPS_STATE_STORE} \
+--node-count=2 --master-size=t2.medium --node-size=t2.medium
+--zones=us-east-1a --name=${KOPS_CLUSTER_NAME} --dns private \
+--master-count 1 --networking flannel --image=ami-042e8287309f5df03 ```
 
 ## Updating the Cluster ##
 ```kops update cluster --name <cluster-name> --yes --admin```
